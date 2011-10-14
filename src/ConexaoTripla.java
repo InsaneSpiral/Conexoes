@@ -1,6 +1,6 @@
 public class ConexaoTripla extends Conexao {
 
-	private static final String VALOR_INVALIDO = "Valor inválido. Digite novamente.";
+	private static final String VALOR_INVALIDO = "Valor invalido. Digite novamente.";
 
 	public ConexaoTripla(Conexao conexao1, Conexao conexao2, Conexao conexao3, Pergunta pergunta) {
 		this.setPergunta(pergunta);

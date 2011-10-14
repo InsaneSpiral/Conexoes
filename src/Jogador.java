@@ -1,7 +1,7 @@
 public class Jogador {
 	
-	private static String DIFICIL_RESPIRAR = "Está difícil de respirar...";
-	private static String LIMITE = "Este é o seu limite, está segurando a respiração.";
+	private static String DIFICIL_RESPIRAR = "Esta dificil de respirar...";
+	private static String LIMITE = "Este e o seu limite, voce esta segurando a respiracao.";
 
 	private int oxigenio;
 	private Conexao conexao;

@@ -1,6 +1,6 @@
 public class ConexaoDupla extends Conexao {
 
-	private static final String VALOR_INVALIDO = "Valor inválido. Digite novamente.";
+	private static final String VALOR_INVALIDO = "Valor invalido. Digite novamente.";
 
 	public ConexaoDupla(Conexao conexao1, Conexao conexao2, Pergunta pergunta) {
 		this.setPergunta(pergunta);

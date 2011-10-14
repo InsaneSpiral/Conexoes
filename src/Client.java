@@ -9,7 +9,7 @@ public class Client {
 		
 		final String FIM_JOGO = "Fim de jogo.";
 		final String POR_POUCO = "Essa foi por pouco!";
-		final String ESTUDE_MAIS = "Estude mais da próxima vez!";
+		final String ESTUDE_MAIS = "Estude mais da proxima vez!";
 
 		LinkedList<Pergunta> perguntas = new LinkedList<Pergunta>();
 		LinkedList<Conexao> conexoes = new LinkedList<Conexao>();
@@ -17,42 +17,42 @@ public class Client {
 		perguntas
 				.add(new PerguntaDupla(
 						"Complete a frase: O modificador de " +
-						"acesso protected utilizado em um método indica que " +
+						"acesso protected utilizado em um metodo indica que " +
 						"apenas classes do mesmo _________ podem acessa-lo.",
 						"Pacote", "Projeto", 1));
 		//1
 		perguntas
 				.add(new PerguntaDupla(
-					"O a definicao de método \"public int obterQuantidade()\" " +
-					"indica que o tipo de retorno deste método é:", "Nulo", "Inteiro", 2));
+					"O a definicao de metodo \"public int obterQuantidade()\" " +
+					"indica que o tipo de retorno deste metodo e:", "Nulo", "Inteiro", 2));
 		//2
 		perguntas
 				.add(new PerguntaDupla(
 					"Recipiente rec = new Recipiente();\n" +
-					"rec = new Recipiente();\nQuantos objetos foram criados no código acima?",
+					"rec = new Recipiente();\nQuantos objetos foram criados no codigo acima?",
 					"Um", "Dois", 2));
 		//3
 		perguntas
 				.add(new PerguntaDupla(
-					"O mesmo objeto pode ser referenciado por mais de uma variável?",
+					"O mesmo objeto pode ser referenciado por mais de uma variavel?",
 					"Verdadeiro", "Falso", 1));
 		//4
 		perguntas
 				.add(new PerguntaTripla(
-					"Em uma classe public, temos uma variável com os modificadores public e static.\n" +
-					"Em quais locais esta variável poderia ser acessada?",
+					"Em uma classe public, temos uma variavel com os modificadores public e static.\n" +
+					"Em quais locais esta variavel poderia ser acessada?",
 					"Classe", "Projeto", "Pacote", 2));
 		//5
 		perguntas
 				.add(new PerguntaTripla(
-					"Qual é palavra chave do Java para definir herança?",
+					"Qual e palavra chave do Java para definir heranca?",
 					"inherits", "implements", "extends", 3));
 		//6
 		perguntas
 				.add(new PerguntaTripla(
-					"Os métodos de acesso (get/set) fazem parte de um padrão de design que " + 
+					"Os metodos de acesso (get/set) fazem parte de um padrao de design que " + 
 					"utiliza conceitos de:",
-					"Enclausuramento", "Encapsulamento", "Proteção", 2));
+					"Enclausuramento", "Encapsulamento", "Protecao", 2));
 		
 		conexoes.add(new ConexaoFinal());//0
 		conexoes.add(new ConexaoSemSaida());//1

@@ -3,8 +3,8 @@ import java.util.LinkedList;
 public abstract class Pergunta {
 
 //	private static final String VOLTAR = "Voltar";
-	private static final String RESPOSTAS_POSSIVEIS = "Respostas possíveis:";
-	private static final String ACERTOU = "Voce sente que está no caminho certo.\n";
+	private static final String RESPOSTAS_POSSIVEIS = "Respostas possiveis:";
+	private static final String ACERTOU = "Voce sente que esta no caminho certo.\n";
 	private static final String ERROU = "Hmm...\n";
 
 	

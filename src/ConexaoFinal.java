@@ -1,6 +1,6 @@
 public class ConexaoFinal extends Conexao {
 
-	public static final String CONEXAO_FINAL = "Parabéns! Você encontrou a saida!\n";
+	public static final String CONEXAO_FINAL = "Parabens! Voce encontrou a saida!\n";
 	
 	@Override
 	public Conexao questionar(){
