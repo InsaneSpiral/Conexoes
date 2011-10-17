@@ -4,15 +4,33 @@ import java.util.Scanner;
 public class Client {
 
 	private static Scanner entrada = new Scanner(System.in);
+		
+	static final String FIM_JOGO = "Fim de jogo.";
+	static final String POR_POUCO = "Essa foi por pouco!";
+	static final String ESTUDE_MAIS = "Estude mais da proxima vez!";
+
+	static LinkedList<Pergunta> perguntas = new LinkedList<Pergunta>();
+	static LinkedList<Conexao> conexoes = new LinkedList<Conexao>();
 
 	public static void main(String[] args) {
-		
-		final String FIM_JOGO = "Fim de jogo.";
-		final String POR_POUCO = "Essa foi por pouco!";
-		final String ESTUDE_MAIS = "Estude mais da proxima vez!";
 
-		LinkedList<Pergunta> perguntas = new LinkedList<Pergunta>();
-		LinkedList<Conexao> conexoes = new LinkedList<Conexao>();
+		montarJogo();
+		
+		Jogador jogador = new Jogador(conexoes.get(14));
+		while (!jogador.getConexao().isConexaoFinal() && jogador.getOxigenio() > 0) {
+			jogador.diminuirOxigenio();
+			jogador.setConexao(jogador.getConexao().questionar());
+		}
+		
+		System.out.println(FIM_JOGO);
+		if (jogador.getOxigenio() == 0) {
+			System.out.println(ESTUDE_MAIS);
+		} else if (jogador.getOxigenio() < 2){
+			System.out.println(POR_POUCO);			
+		}
+	}
+
+	public static void montarJogo() {
 		//0
 		perguntas
 				.add(new PerguntaDupla(
@@ -75,20 +93,6 @@ public class Client {
 		conexoes.add(new ConexaoTripla(conexoes.get(12), conexoes.get(8), conexoes.get(11), perguntas.get(6)));//13
 
 		conexoes.add(new ConexaoDupla(conexoes.get(10), conexoes.get(13), perguntas.get(3)));//14
-
-
-		Jogador jogador = new Jogador(conexoes.get(14));
-		while (!jogador.getConexao().isConexaoFinal() && jogador.getOxigenio() > 0) {
-			jogador.diminuirOxigenio();
-			jogador.setConexao(jogador.getConexao().questionar());
-		}
-		
-		System.out.println(FIM_JOGO);
-		if (jogador.getOxigenio() == 0) {
-			System.out.println(ESTUDE_MAIS);
-		} else if (jogador.getOxigenio() < 2){
-			System.out.println(POR_POUCO);			
-		}
 	}
 
 	public static Scanner getEntrada() {
