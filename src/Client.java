@@ -30,7 +30,7 @@ public class Client {
 		}
 	}
 
-	public static void montarJogo() {
+	private static void montarJogo() {
 		//0
 		perguntas
 				.add(new PerguntaDupla(
