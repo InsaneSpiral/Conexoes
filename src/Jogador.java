@@ -12,11 +12,15 @@ public class Jogador {
 		this.oxigenio = 7;
 		this.conexao = conexaoInicial;
 		this.conexaoAnterior = conexaoInicial;
-		this.pontos = 0;
+		this.pontos = 20;
 	}
 
 	public int getOxigenio() {
 		return oxigenio;
+	}
+
+	public void diminuirPontos() {
+		pontos -= 2;
 	}
 
 	public void diminuirOxigenio(){

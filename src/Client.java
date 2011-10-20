@@ -8,9 +8,10 @@ public class Client {
 	static final String FIM_JOGO = "Fim de jogo.";
 	static final String POR_POUCO = "Essa foi por pouco!";
 	static final String ESTUDE_MAIS = "Estude mais da proxima vez!";
+	static final String PONTUACAO_FINAL = "Pontuacao Final: ";
 
-	static LinkedList<Pergunta> perguntas = new LinkedList<Pergunta>();
-	static LinkedList<Conexao> conexoes = new LinkedList<Conexao>();
+	private static LinkedList<Pergunta> perguntas = new LinkedList<Pergunta>();
+	private static LinkedList<Conexao> conexoes = new LinkedList<Conexao>();
 
 	public static void main(String[] args) {
 
@@ -19,6 +20,7 @@ public class Client {
 		Jogador jogador = new Jogador(conexoes.get(14));
 		while (!jogador.getConexao().isConexaoFinal() && jogador.getOxigenio() > 0) {
 			jogador.diminuirOxigenio();
+			jogador.diminuirPontos();
 			jogador.setConexao(jogador.getConexao().questionar());
 		}
 		
@@ -28,6 +30,7 @@ public class Client {
 		} else if (jogador.getOxigenio() < 2){
 			System.out.println(POR_POUCO);			
 		}
+		System.out.println(PONTUACAO_FINAL + jogador.getPontos());
 	}
 
 	private static void montarJogo() {
